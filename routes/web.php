@@ -5,6 +5,10 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ProgramController;
+use App\Http\Controllers\AboutusController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,18 +21,14 @@ use App\Http\Controllers\ArticleController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/about', [AboutController::class, 'about']);
-Route::get('/articles/{id}', [ArticleController::class, 'articles']);
+//Jobsheet1
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 
-// Route::get('/', [PageController::class, 'index']);
-// Route::get('/about', [PageController::class, 'about']);
-// Route::get('/articles/{id}', [PageController::class, 'articles']);
+//========================================================
 
-// Route::get('/welcome', function () {
-//     return view('welcome');
-// });
-
+//Jobsheet2 Praktikum1
 // Route::get('/', function () {
 //     return "Hi! Selamat Datang di Website Laravel";
 // });
@@ -43,3 +43,45 @@ Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 // Route::get('/articles/{id}', function ($id) {
 //     return "Ini adalah halaman Artikel dengan id " . $id;
 // });
+
+//========================================================
+
+// Jobsheet2 Praktikum2
+//Nomer3
+// Route::get('/', [PageController::class, 'index']);
+// Route::get('/about', [PageController::class, 'about']);
+// Route::get('/articles/{id}', [PageController::class, 'articles']);
+
+// Nomer5
+// Route::get('/', [HomeController::class, 'index']);
+// Route::get('/about', [AboutController::class, 'about']);
+// Route::get('/articles/{id}', [ArticleController::class, 'articles']);
+
+//========================================================
+
+// Jobsheet2 Praktikum3
+Route::get('/', [HomeController::class, 'index']);
+
+Route::prefix('product')->group( function () {
+    Route::get('/', [ProductController::class, 'index']);
+    Route::get('/marble-edu-games', [ProductController::class, 'marble_edu_games']);
+    Route::get('/marble-and-friends-kids-games', [ProductController::class, 'marble_and_friends_kids_games']);
+    Route::get('/riri-story-books', [ProductController::class, 'riri_story_books']);
+    Route::get('/kolak-kids-songs', [ProductController::class, 'kolak_kids_songs']);
+});
+
+Route::prefix('news')->group( function () {
+    Route::get('/', [NewsController::class, 'index']);
+    Route::get('/educastudio', [NewsController::class, 'news']);
+    Route::get('/educastudio-berbagi', [NewsController::class, 'berbagi']);
+});
+
+Route::prefix('program')->group( function () {
+    Route::get('/', [ProgramController::class, 'index']);
+    Route::get('/karir', [ProgramController::class, 'karir']);
+    Route::get('/magang', [ProgramController::class, 'magang']);
+    Route::get('/kunjungan-industri', [ProgramController::class, 'kunjungan_industri']);
+});
+
+Route::get('/about', [AboutusController::class, 'index']);
+    
