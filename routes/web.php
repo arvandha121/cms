@@ -14,21 +14,25 @@ use App\Http\Controllers\PageController;
 |
 */
 
+Route::get('/', [PageController::class, 'index']);
+Route::get('/about', [PageController::class, 'about']);
+Route::get('/articles/{id}', [PageController::class, 'articles']);
+
 // Route::get('/welcome', function () {
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return "Hi! Selamat Datang di Website Laravel";
-});
+// Route::get('/', function () {
+//     return "Hi! Selamat Datang di Website Laravel";
+// });
 
-Route::get('/about', function () {
-    return "
-    NIM     : 2041720134
-    Nama    : Arief Nauvan Ramadha
-    Kelas   : TI - 2G";
-});
+// Route::get('/about', function () {
+//     return "
+//     NIM     : 2041720134
+//     Nama    : Arief Nauvan Ramadha
+//     Kelas   : TI - 2G";
+// });
 
-Route::get('/articles/{id}', function ($id) {
-    return "Ini adalah halaman Artikel dengan id " . $id;
-});
+// Route::get('/articles/{id}', function ($id) {
+//     return "Ini adalah halaman Artikel dengan id " . $id;
+// });
