@@ -34,7 +34,14 @@ http://www.tooplate.com/view/2092-shelf
             
             @yield('content')
 
-            @yield('footer')  
+            @yield('content-contact')
+
+            @yield('content-preview')
+
+            @yield('content-team')
+
+            @yield('footer')
+
         </div>
         
         <!-- load JS files -->

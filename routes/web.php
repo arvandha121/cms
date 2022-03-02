@@ -92,3 +92,15 @@ Route::get('/welcome', function () {
 Route::get('/home', function(){
     return view('home');
 });
+
+Route::get('/contact-us', function(){
+    return view('contact');
+});
+
+Route::get('/our-team', function(){
+    return view('team');
+});
+
+Route::get('/preview', function(){
+    return view('preview');
+});

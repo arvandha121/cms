@@ -12,11 +12,11 @@
 
         <div class="collapse navbar-collapse tm-main-nav" id="tmMainNav">
             <ul class="nav nav-fill tm-main-nav-ul">
-                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Catalogs</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#" style="pointer-events:none">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="preview">Catalogs</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Awards</a></li>
-                <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="our-team">Our Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact-us">Contact Us</a></li>
             </ul>
         </div>
     </nav>
