@@ -60,28 +60,35 @@ Route::get('/welcome', function () {
 //========================================================
 
 // Jobsheet2 Praktikum3
-Route::get('/', [HomeController::class, 'index']);
+// Route::get('/', [HomeController::class, 'index']);
 
-Route::prefix('product')->group( function () {
-    Route::get('/', [ProductController::class, 'index']);
-    Route::get('/marble-edu-games', [ProductController::class, 'marble_edu_games']);
-    Route::get('/marble-and-friends-kids-games', [ProductController::class, 'marble_and_friends_kids_games']);
-    Route::get('/riri-story-books', [ProductController::class, 'riri_story_books']);
-    Route::get('/kolak-kids-songs', [ProductController::class, 'kolak_kids_songs']);
+// Route::prefix('product')->group( function () {
+//     Route::get('/', [ProductController::class, 'index']);
+//     Route::get('/marble-edu-games', [ProductController::class, 'marble_edu_games']);
+//     Route::get('/marble-and-friends-kids-games', [ProductController::class, 'marble_and_friends_kids_games']);
+//     Route::get('/riri-story-books', [ProductController::class, 'riri_story_books']);
+//     Route::get('/kolak-kids-songs', [ProductController::class, 'kolak_kids_songs']);
+// });
+
+// Route::prefix('news')->group( function () {
+//     Route::get('/', [NewsController::class, 'index']);
+//     Route::get('/educastudio', [NewsController::class, 'news']);
+//     Route::get('/educastudio-berbagi', [NewsController::class, 'berbagi']);
+// });
+
+// Route::prefix('program')->group( function () {
+//     Route::get('/', [ProgramController::class, 'index']);
+//     Route::get('/karir', [ProgramController::class, 'karir']);
+//     Route::get('/magang', [ProgramController::class, 'magang']);
+//     Route::get('/kunjungan-industri', [ProgramController::class, 'kunjungan_industri']);
+// });
+
+// Route::get('/about', [AboutusController::class, 'index']);
+
+// Route::get('/hello', function(){
+//     return view('layout.hello', ['name' => 'Nauvan']);
+// });
+
+Route::get('/home', function(){
+    return view('home');
 });
-
-Route::prefix('news')->group( function () {
-    Route::get('/', [NewsController::class, 'index']);
-    Route::get('/educastudio', [NewsController::class, 'news']);
-    Route::get('/educastudio-berbagi', [NewsController::class, 'berbagi']);
-});
-
-Route::prefix('program')->group( function () {
-    Route::get('/', [ProgramController::class, 'index']);
-    Route::get('/karir', [ProgramController::class, 'karir']);
-    Route::get('/magang', [ProgramController::class, 'magang']);
-    Route::get('/kunjungan-industri', [ProgramController::class, 'kunjungan_industri']);
-});
-
-Route::get('/about', [AboutusController::class, 'index']);
-    
