@@ -12,10 +12,10 @@
 
         <div class="collapse navbar-collapse tm-main-nav" id="tmMainNav">
             <ul class="nav nav-fill tm-main-nav-ul">
-                <li class="nav-item"><a class="nav-link active" href="#" style="pointer-events:none">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="home" style="pointer-events:none">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="preview">Catalogs</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Awards</a></li>
-                <li class="nav-item"><a class="nav-link" href="our-team">Our Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="team">Our Team</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact-us">Contact Us</a></li>
             </ul>
         </div>
@@ -25,25 +25,6 @@
 @endsection
 
 @section('content')
-{{-- <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
 <div class="tm-main-content">
     <section class="tm-margin-b-l">
         <header>
@@ -54,16 +35,18 @@
         
         <div class="tm-gallery">
             <div class="row">
+                @foreach($function as $f)
                 <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
                     <a href="preview.html">
                         <div class="tm-gallery-item-overlay">
-                            <img src="img/image-01.jpg" alt="Image" class="img-fluid tm-img-center">
+                            <img src="img/{{ $f->image }}" alt="Image" class="img-fluid tm-img-center">
                         </div>
                         
-                        <p class="tm-figcaption">Nam vitae odio</p>
+                        <p class="tm-figcaption">{{ $f->title }}</p>
                     </a>
                 </figure>
-                <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+                @endforeach
+                {{-- <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
                     <a href="preview.html">
                         <div class="tm-gallery-item-overlay">
                             <img src="img/image-02.jpg" alt="Image" class="img-fluid tm-img-center">
@@ -118,7 +101,7 @@
                         </div>
                         <p class="tm-figcaption">Vivamus facilisis</p>
                     </a>
-                </figure> 
+                </figure>  --}}
             </div>   
         </div>
         

@@ -9,6 +9,8 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\AboutusController;
+use App\Http\Controllers\PostsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +24,9 @@ use App\Http\Controllers\AboutusController;
 */
 
 //Jobsheet1
-Route::get('/welcome', function () {
-    return view('welcome');
-});
+// Route::get('/welcome', function () {
+//     return view('welcome');
+// });
 
 //========================================================
 
@@ -89,18 +91,26 @@ Route::get('/welcome', function () {
 //     return view('layout.hello', ['name' => 'Nauvan']);
 // });
 
-Route::get('/home', function(){
-    return view('home');
-});
+//========================================================
 
-Route::get('/contact-us', function(){
-    return view('contact');
-});
+// Minggu3 Praktikum1
+// Route::get('/home', function(){
+//     return view('home');
+// });
 
-Route::get('/our-team', function(){
-    return view('team');
-});
+// Route::get('/contact-us', function(){
+//     return view('contact');
+// });
 
-Route::get('/preview', function(){
-    return view('preview');
-});
+// Route::get('/our-team', function(){
+//     return view('team');
+// });
+
+// Route::get('/preview', function(){
+//     return view('preview');
+// });
+
+//========================================================
+
+//Minggu4 Prak1
+Route::get('/',[PostsController::class, 'index']);
