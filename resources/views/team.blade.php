@@ -24,7 +24,7 @@
 </header>
 @endsection
 
-@section('content-team')
+@section('content')
 <div class="tm-main-content">                    
     <section class="row tm-item-preview tm-margin-b-xl">
         <div class="col-12">

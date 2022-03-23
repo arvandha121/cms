@@ -12,7 +12,7 @@
 
         <div class="collapse navbar-collapse tm-main-nav" id="tmMainNav">
             <ul class="nav nav-fill tm-main-nav-ul">
-                <li class="nav-item"><a class="nav-link" href="home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                 <li class="nav-item"><a class="nav-link active" href="#" style="pointer-events:none">Catalogs</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Awards</a></li>
                 <li class="nav-item"><a class="nav-link" href="our-team">Our Team</a></li>
@@ -24,7 +24,7 @@
 </header>
 @endsection
 
-@section('content-preview')
+@section('content')
 <div class="tm-main-content no-pad-b">
                     
     <section class="row tm-item-preview">

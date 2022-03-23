@@ -24,7 +24,7 @@
 </header>
 @endsection
 
-@section('content-contact')
+@section('content')
 <div class="tm-main-content">
     <section class="row tm-margin-b-l">
         <div class="col-12">

@@ -113,4 +113,15 @@ use App\Http\Controllers\PostsController;
 //========================================================
 
 //Minggu4 Prak1
+// Route::get('/',[PostsController::class, 'index']);
+
+//========================================================
+
+//Minggu6 Prak1
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/',[PostsController::class, 'index']);
+Route::get('/contact-us',[PostsController::class, 'contact']);
+Route::get('/team',[PostsController::class, 'team']);
+Route::get('/preview',[PostsController::class, 'preview']);
