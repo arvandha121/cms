@@ -1,16 +1,19 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\AboutusController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\ArticleController;
 
+// Minggu10
+Route::resource('articles', ArticleController::class);
 
 /*
 |--------------------------------------------------------------------------
@@ -118,10 +121,14 @@ use App\Http\Controllers\PostsController;
 //========================================================
 
 //Minggu6 Prak1
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/',[PostsController::class, 'index']);
-Route::get('/contact-us',[PostsController::class, 'contact']);
-Route::get('/team',[PostsController::class, 'team']);
-Route::get('/preview',[PostsController::class, 'preview']);
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/',[PostsController::class, 'index']);
+// Route::get('/contact-us',[PostsController::class, 'contact']);
+// Route::get('/team',[PostsController::class, 'team']);
+// Route::get('/preview',[PostsController::class, 'preview']);
+
+
+//========================================================
+
