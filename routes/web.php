@@ -12,8 +12,6 @@ use App\Http\Controllers\AboutusController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ArticleController;
 
-// Minggu10
-Route::resource('articles', ArticleController::class);
 
 /*
 |--------------------------------------------------------------------------
@@ -132,3 +130,6 @@ Route::resource('articles', ArticleController::class);
 
 //========================================================
 
+// Minggu10
+Route::resource('articles', ArticleController::class);
+Route::get('/article/cetak_pdf', [ArticleController::class, 'cetak_pdf'])->name('cetak_pdf');
